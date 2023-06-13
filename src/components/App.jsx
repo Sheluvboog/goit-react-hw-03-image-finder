@@ -74,10 +74,12 @@ export class App extends Component {
   };
 
   closeModal = () => {
-    this.setState(({ showModal }) => {
-      return { showModal: !showModal };
-    });
-  };
+  this.setState({
+    showModal: false,
+    largeImageURL: "",
+    alt: ""
+  });
+};
 
   render() {
     const { error, loading, images, total, page } = this.state;
